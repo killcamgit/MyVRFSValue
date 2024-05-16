@@ -61,21 +61,19 @@
 
       let customsprice = 0
       let ballondorprice = 0
-      let dribblingprice = 0
 
-      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
 
       if (document.getElementById("hascustoms").checked) {
 
         customsprice = 400000
-        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
 
       }
 
       if (document.getElementById("wonaleagueballondor").checked) {
 
-        ballondorprice = 2500000
-        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+        totalvalue = (totalvalue * 1.2)
 
       }
 
