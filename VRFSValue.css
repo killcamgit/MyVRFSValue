@@ -40,7 +40,7 @@ h1 {
 
 #Submit {
 text-align: center;
-width: 80%;
+width: fit-content;
 height: 6vh;
 font-size: 4vw;
 font-style: italic;
