@@ -9,7 +9,7 @@
 
   .Contents {
 
-    width: 800px;
+    width: max-width;
     height: 850px;
     margin-left: auto;
     margin-right: auto;
