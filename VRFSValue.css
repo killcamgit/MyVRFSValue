@@ -41,9 +41,9 @@ h1 {
 #Submit {
   
 text-align: center;
-width: 80%;
-height: 6vh;
-font-size: 1vw;
+width: 80vw;
+height: 10vh;
+font-size: 5vh;
 font-style: italic;
 color: red;
 
