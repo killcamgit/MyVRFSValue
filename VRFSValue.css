@@ -33,6 +33,8 @@ body {
 
 #Submit {
 text-align: center;
+width: 80vw;
+height: 1vh;
 font-size: 2vh;
 font-style: italic;
 margin-top: 0px;
