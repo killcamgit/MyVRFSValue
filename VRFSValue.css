@@ -14,6 +14,12 @@ body {
 
 }
 
+.Contents, form {
+
+  height: 80%;
+
+}
+
 .Contents, form, input {
 
   text-align: center;
@@ -34,7 +40,7 @@ body {
 #Submit {
 text-align: center;
 width: 80vw;
-height: 1vh;
+height: 3vh;
 font-size: 2vh;
 font-style: italic;
 color: red;
