@@ -9,7 +9,7 @@
 
   .Contents {
 
-    width: 800px;
+    width: device-width;
     height: 850px;
     margin-left: auto;
     margin-right: auto;
@@ -28,7 +28,7 @@
     .Form input {
 
         margin-bottom: -50px;
-        width: 200px;
+        width: 60%;
         height: 50px;
         color: rgb(0, 0, 0);
         background-color: white;
@@ -38,7 +38,7 @@
 
     #Submit {
 
-        width: 800px;
+        width: 90%;
         height: 100px;
         text-align: center;
     
