@@ -57,7 +57,16 @@ color: red;
 
 .Links {
 
+color: white;
 text-align: center;
-font-size = 2vw;
+font-size: 2vw;
+  
+}
+
+.ActiveLink {
+
+color: red;
+text-align: center;
+font-size: 2vw;
   
 }
