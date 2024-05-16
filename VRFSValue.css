@@ -31,6 +31,15 @@ body {
 
 }
 
+#Submit {
+text-align: center;
+font-size: 2vh;
+font-style: italic;
+margin-top: 0px;
+color: red;
+
+}
+
 #Value {
 
 margin-top: 0px;
