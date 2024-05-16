@@ -81,7 +81,16 @@
 
       if (document.getElementById("dribblerating").value) {
 
-       totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))  
+        if (document.getElementById("dribblerating").value > 0) {
+
+          totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))  
+          
+        }
+        else{
+
+          totalvalue = (totalvalue * 0.2)
+
+        }
 
       }
 
