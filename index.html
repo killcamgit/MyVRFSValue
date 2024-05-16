@@ -1,0 +1,55 @@
+<html>
+<link rel="stylesheet" href="MyVRFS.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>My VRFS Value</title>
+
+<div class="Contents">
+<h1>Get Your VRFS Transfer Value!</h1>
+
+
+<form>
+<div class="Form">
+
+  <img src="vrfslogo.png" alt="My VRFS Value Logo" width="200" height="200">
+
+    <div class="Centered"><label for="ovrrating">Overall:</label></div>
+    <input type="text" id="ovrrating" name="ovrrating"><br><br>
+    <div class="Centered"><label for="shotrating">Shooting:</label></div>
+    <input type="text" id="shotrating" name="shotrating"><br><br>
+    <div class="Centered"><label for="passrating">Passing:</label></div>
+    <input type="text" id="passrating" name="passrating"><br><br>
+    <div class="Centered"><label for="defencerating">Defending:</label></div>
+    <input type="text" id="defencerating" name="defencerating"><br><br>
+    <div class="Centered"><label for="gkrating">Goalkeeping:</label></div>
+    <input type="text" id="gkrating" name="gkrating"><br><br>
+
+</div>
+
+</form>
+
+<button id="Submit" onclick="submitFunction()">SUBMIT</button>
+
+</div>
+
+<h1 id="Value">£0</h1>
+
+<script>
+    function submitFunction() {
+
+      let value = 0
+      let overallprice = 1600 * parseFloat(document.getElementById("ovrrating").value)
+      let shootingprice = 1200 * parseFloat(document.getElementById("shotrating").value)
+      let passingprice = 1100 * parseFloat(document.getElementById("passrating").value)
+      let defendingprice = 1000 * parseFloat(document.getElementById("defencerating").value)
+      let gkprice = 1500 * parseFloat(document.getElementById("gkrating").value)
+
+      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice
+
+      document.getElementById("Value").innerHTML = "£" + totalvalue;
+
+    }
+    </script>
+
+</html>
