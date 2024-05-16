@@ -1,17 +1,16 @@
 <html>
 <link rel="stylesheet" href="VRFSValue.css">
 
-<meta content="text/html; charset=utf-8" http-equiv="content-type" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 <title>My VRFS Value</title>
 
-<div class="Contents">
+
 <h1>Get Your VRFS Transfer Value!</h1>
 
+<div class="Contents">
 
 <form>
-<div class="Form">
 
   <img src="vrfsvaluelogo.png" alt="My VRFS Value Logo" width="200" height="200">
 
@@ -28,27 +27,63 @@
 
 </form>
 
+<input type="checkbox" id="hascustoms" name="hascustoms" value="Customs">
+<label for="hascustoms">Have you won customs? (not bought or giveaway)</label>
+<br>
+<br>
+<input type="checkbox" id="wonaleagueballondor" name="wonaleagueballondor" value="Ballondor">
+<label for="wonaleagueballondor">Have you won best player in a league that has over 2000 members?</label>
+<br>
+<br>
+<div class="Centered"><label for="dribblerating">On a scale of 0 to 10, how good are you at dribbling? (10 meaning you beat everybody, 5 being you beat people sometimes, 0 being i cant dribble):</label></div>
+<input type="text" id="dribblerating" name="dribblerating"><br><br>
+<br>
+<br>
+
+
 <button id="Submit" onclick="submitFunction()">SUBMIT</button>
 
 <h1 id="Value">£0</h1>
 
-  </div>
-
-  </div>
+</div>
 
 <script>
     function submitFunction() {
 
-      let value = 0
-      let overallprice = 1600 * parseFloat(document.getElementById("ovrrating").value)
-      let shootingprice = 1200 * parseFloat(document.getElementById("shotrating").value)
-      let passingprice = 1100 * parseFloat(document.getElementById("passrating").value)
-      let defendingprice = 1000 * parseFloat(document.getElementById("defencerating").value)
-      let gkprice = 1500 * parseFloat(document.getElementById("gkrating").value)
+      let overallprice = 4000 * parseFloat(document.getElementById("ovrrating").value)
+      let shootingprice = 2500 * parseFloat(document.getElementById("shotrating").value)
+      let passingprice = 2500 * parseFloat(document.getElementById("passrating").value)
+      let defendingprice = 2100 * parseFloat(document.getElementById("defencerating").value)
+      let gkprice = 2100 * parseFloat(document.getElementById("gkrating").value)
 
-      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice
+      let customsprice = 0
+      let ballondorprice = 0
+      let dribblingprice = 0
 
-      document.getElementById("Value").innerHTML = "£" + totalvalue;
+      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+
+      if (document.getElementById("hascustoms").checked) {
+
+        customsprice = 400000
+        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+
+      }
+
+      if (document.getElementById("wonaleagueballondor").checked) {
+
+        ballondorprice = 2500000
+        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + dribblingprice + ballondorprice + customsprice
+
+      }
+
+      if (document.getElementById("dribblerating").value) {
+
+       totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))  
+
+      }
+
+
+      document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();;
 
     }
     </script>
