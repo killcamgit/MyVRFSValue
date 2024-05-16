@@ -41,13 +41,21 @@
 
     #Submit {
 
-        width: 90%;
-        height: 100px;
+        margin-bottom: -50px;
+        width: 60%;
+        height: 50px;
+        color: rgb(0, 0, 0);
+        background-color: white;
         text-align: center;
     
     }
 
     h1, #Value{
-      text-align: center;
+     margin-bottom: -50px;
+        width: 60%;
+        height: 50px;
+        color: rgb(0, 0, 0);
+        background-color: white;
+        text-align: center;
     }
 
