@@ -1,114 +1,261 @@
 <html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
 <link rel="stylesheet" href="VRFSValue.css">
 
-<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" class="js-focus-visible" data-turbo-loaded="">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<title>My VRFS Value</title>
-
-  <div class="Links">
-
- <div class="ActiveLink"><a href="./index.html">Home</a></div>
-  <a href="./MyTransferValue.html">My Transfer Value</a>
-    
-  </div>
-
-<head>
-
-</head>
-
 <body>
-  
-<h1>Get Your VRFS Transfer Value!</h1>
 
-<div class="Contents">
+<header>
 
-<form>
+    <h1>VRFS FUN</h1>
 
-  <img src="vrfsvaluelogo.png" alt="My VRFS Value Logo" width="200" height="200">
+</header>
 
-    <div class="Centered"><label for="ovrrating">Overall:</label></div>
-    <input type="text" id="ovrrating" name="ovrrating"><br><br>
-    <div class="Centered"><label for="shotrating">Shooting:</label></div>
-    <input type="text" id="shotrating" name="shotrating"><br><br>
-    <div class="Centered"><label for="passrating">Passing:</label></div>
-    <input type="text" id="passrating" name="passrating"><br><br>
-    <div class="Centered"><label for="defencerating">Defending:</label></div>
-    <input type="text" id="defencerating" name="defencerating"><br><br>
-    <div class="Centered"><label for="gkrating">Goalkeeping:</label></div>
-    <input type="text" id="gkrating" name="gkrating"><br><br>
+<nav class="TopNav">
 
-  <input type="checkbox" id="hascustoms" name="hascustoms" value="Customs">
-<label for="hascustoms">Have you won customs? (not bought or giveaway)</label>
-<br>
-<br>
-<input type="checkbox" id="wonaleagueballondor" name="wonaleagueballondor" value="Ballondor">
-<label for="wonaleagueballondor">Have you won best player in a league that has over 2000 members?</label>
-<br>
-<br>
-<div class="Centered"><label for="dribblerating">On a scale of 0 to 10, how good are you at dribbling in competitive games? (10 meaning you beat everybody, 5 being you beat people sometimes, 0 being i cant dribble):</label></div>
-<input type="text" id="dribblerating" name="dribblerating"><br><br>
+    <a href="./index.html">Home</a>
+    <a href="./mytransfervalue.html">My Transfer Value</a>
 
-<button id="Submit" type="button" onclick="submitFunction()">SUBMIT</button>
+</nav>
 
-<h1 id="Value">£0</h1>
+<main>
 
-</form>
+        <h1>My Transfer Value</h1>
+        <h2>Enter Your Stats To Find Your Value!</h2>
+        
+        <form>
 
-
-<br>
-<br>
-<br>
-</div>
-</body>
-
-<script>
-    function submitFunction() {
-
-      let overallprice = 4000 * parseFloat(document.getElementById("ovrrating").value)
-      let shootingprice = 2500 * parseFloat(document.getElementById("shotrating").value)
-      let passingprice = 2500 * parseFloat(document.getElementById("passrating").value)
-      let defendingprice = 2100 * parseFloat(document.getElementById("defencerating").value)
-      let gkprice = 2100 * parseFloat(document.getElementById("gkrating").value)
-
-      let customsprice = 0
-      let ballondorprice = 0
-
-      let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-
-      if (document.getElementById("hascustoms").checked) {
-
-        customsprice = 400000
-        totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-
-      }
-
-      if (document.getElementById("wonaleagueballondor").checked) {
-
-        totalvalue = (totalvalue * 1.2)
-
-      }
-
-      if (document.getElementById("dribblerating").value) {
-
-        if (document.getElementById("dribblerating").value > 0) {
-
-          totalvalue = (totalvalue * (0.4 * document.getElementById("dribblerating").value))  
+            <img style="width: 300px; height:300px;" src="vrfsvaluelogo.png" alt="My VRFS Value Logo" width="200" height="200">
           
+              <div class="Centered"><label for="playerposition">Position: (GK, LB, CB, RB, CDM, CM, CAM, LW, RW, ST)</label></div>
+              <input type="text" id="playerposition" name="playerposition"><br><br>
+              <div class="Centered"><label for="ovrrating">Overall:</label></div>
+              <input type="text" id="ovrrating" name="ovrrating"><br><br>
+              <div class="Centered"><label for="shotrating">Shooting:</label></div>
+              <input type="text" id="shotrating" name="shotrating"><br><br>
+              <div class="Centered"><label for="passrating">Passing:</label></div>
+              <input type="text" id="passrating" name="passrating"><br><br>
+              <div class="Centered"><label for="defencerating">Defending:</label></div>
+              <input type="text" id="defencerating" name="defencerating"><br><br>
+              <div class="Centered"><label for="gkrating">Goalkeeping:</label></div>
+              <input type="text" id="gkrating" name="gkrating"><br><br>
+          
+            <input type="checkbox" id="hascustoms" name="hascustoms" value="Customs">
+          <label for="hascustoms">Have you won customs? (not bought or giveaway)</label>
+          <br>
+          <br>
+          <input type="checkbox" id="wonaleagueballondor" name="wonaleagueballondor" value="Ballondor">
+          <label for="wonaleagueballondor">Have you won best player in a league that has over 2000 members?</label>
+          <br>
+          <br>
+          <div class="Centered"><label for="dribblerating">On a scale of 0 to 10, how good are you at dribbling in competitive games? (10 meaning you beat everybody, 5 being you beat people sometimes, 0 being i cant dribble):</label></div>
+          <input type="text" id="dribblerating" name="dribblerating"><br><br>
+          
+          <button id="Submit" type="button" onclick="submitFunction()">SUBMIT</button>
+          
+          <h1 id="Value">£0</h1>
+          
+          </form>
+          
+          
+          <br>
+          <br>
+          <br>
+          </div>
+          </body>
+          
+          <script>
+              function submitFunction() {
+                
+                let position = String(document.getElementById("playerposition").value)
+
+                if(position == "CM" || position == "CAM"){
+          
+                let overallprice = 3000 * parseFloat(document.getElementById("ovrrating").value)
+                let shootingprice = 2000 * parseFloat(document.getElementById("shotrating").value)
+                let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
+                let defendingprice = 2000 * parseFloat(document.getElementById("defencerating").value)
+                let gkprice = 1000 * parseFloat(document.getElementById("gkrating").value)
+          
+                let customsprice = 0
+                let ballondorprice = 0
+          
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+          
+                if (document.getElementById("hascustoms").checked) {
+          
+                  customsprice = 400000
+                  totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+          
+                }
+          
+                if (document.getElementById("wonaleagueballondor").checked) {
+          
+                  totalvalue = (totalvalue * 1.2)
+          
+                }
+          
+                if (document.getElementById("dribblerating").value) {
+          
+                    totalvalue = (totalvalue * (0.4 * document.getElementById("dribblerating").value))  
+
+                }
+
+                if (totalvalue > 0){
+
+                    document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
+
+                }
+
+              }
+
+        else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
+          
+          let overallprice = 3000 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 1000 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 4000 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 4000 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 2000 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          if (document.getElementById("hascustoms").checked) {
+    
+            customsprice = 400000
+            totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          }
+    
+          if (document.getElementById("wonaleagueballondor").checked) {
+    
+            totalvalue = (totalvalue * 1.2)
+    
+          }
+    
+          if (document.getElementById("dribblerating").value) {
+
+              totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))  
+              
+          }
+
+
+          if (totalvalue > 0){
+
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
+
+          }
+
         }
-        else{
 
-          totalvalue = (totalvalue * 0.3)
+        else if(position == "LW" || position == "RW" || position == "ST"){
+          
+          let overallprice = 3000 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 4000 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 1000 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 1000 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          if (document.getElementById("hascustoms").checked) {
+    
+            customsprice = 400000
+            totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          }
+    
+          if (document.getElementById("wonaleagueballondor").checked) {
+    
+            totalvalue = (totalvalue * 1.2)
+    
+          }
+    
+          if (document.getElementById("dribblerating").value) {
+
+            if (document.getElementById("dribblerating").value >= 8) {
+
+                totalvalue = (totalvalue * (0.35 * document.getElementById("dribblerating").value))   
+
+            }
+            else if (document.getElementById("dribblerating").value >= 5 && document.getElementById("dribblerating").value < 8) {
+
+                totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))   
+
+            }
+
+            else{
+
+                totalvalue = (totalvalue * (0.25 * document.getElementById("dribblerating").value))   
+
+            }
+    
+
+          }
+
+          if (totalvalue > 0){
+
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
+
+          }
 
         }
 
-      }
+        else if(position == "GK"){
+          
+          let overallprice = 3000 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 1000 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 2000 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 2000 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          if (document.getElementById("hascustoms").checked) {
+    
+            customsprice = 400000
+            totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
+          }
+    
+          if (document.getElementById("wonaleagueballondor").checked) {
+    
+            totalvalue = (totalvalue * 1.2)
+    
+          }
+    
+          if (document.getElementById("dribblerating").value) {
+    
+            totalvalue = (totalvalue * (0.2 * document.getElementById("dribblerating").value))  
+    
+          }
 
+          if (totalvalue > 0){
 
-      document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();;
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
+
+          }
+
+        }
 
     }
-    </script>
+
+              </script>
+
+
+</main>
+
+</body>
+
+
+
 
 </html>
