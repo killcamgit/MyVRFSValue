@@ -66,8 +66,9 @@
           
           <script>
               function submitFunction() {
-                
-                let position = toUpper(document.getElementById("playerposition").value)
+
+                let positioninput = document.getElementById("playerposition").value
+                let position = positioninput.toUpperCase
 
                 if(position == "CM" || position == "CAM"){
           
