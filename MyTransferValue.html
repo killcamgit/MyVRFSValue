@@ -84,7 +84,7 @@
           
                 let customsprice = 0
                 let ballondorprice = 0
-                let timeplayed = parseFloat(document.getElementById("timeplayed").value) / 2
+                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
                
                 let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
 
@@ -115,7 +115,7 @@
 
                 }
 
-                 totalvalue = totalvalue + (totalvalue * timeplayed)
+                 totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
               }
 
@@ -147,7 +147,7 @@
 
           }
 
-         totalvalue = totalvalue + (totalvalue * timeplayed)
+         totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
         }
 
@@ -185,7 +185,7 @@
 
             }
 
-           totalvalue = totalvalue + (totalvalue * timeplayed)
+           totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
     
 
           }
@@ -219,7 +219,7 @@
 
           }
 
-         totalvalue = totalvalue + (totalvalue * timeplayed)
+         totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
         }
                
