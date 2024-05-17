@@ -62,16 +62,6 @@ height: 6%;
   
 }
 
-.Links, a:link {
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.Links, a:hover, a:active {
-  background-color: grey;
-  color: white;
-}
 
 .ActiveLink {
 
