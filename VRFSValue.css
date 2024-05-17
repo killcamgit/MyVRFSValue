@@ -69,11 +69,11 @@ height: 10%;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
 .Links, a:hover, a:active {
-  background-color: green;
+  background-color: grey;
   color: white;
 }
 
