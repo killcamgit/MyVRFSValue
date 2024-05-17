@@ -84,7 +84,7 @@
           
                 let customsprice = 0
                 let ballondorprice = 0
-                let timeplayedprice = 0
+                let timeplayedprice = parseFloat(document.getElementById("timeplayed").value) / 2
                
                 let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
 
@@ -214,6 +214,8 @@
           }
 
         }
+
+         totalvalue = totalvalue + (totalvalue * timeplayed)
 
     }
 
