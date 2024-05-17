@@ -76,8 +76,6 @@
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
 
-                if(position == "CM" || position == "CAM"){
-          
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 2000 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 2500 * parseFloat(document.getElementById("passrating").value)
@@ -86,9 +84,12 @@
           
                 let customsprice = 0
                 let ballondorprice = 0
-          
+                let timeplayedprice = 0
+               
                 let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-          
+
+                if(position == "CM" || position == "CAM"){
+         
                 if (document.getElementById("hascustoms").checked) {
           
                   customsprice = 400000
@@ -117,17 +118,6 @@
               }
 
         else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
-          
-          let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
-          let shootingprice = 500 * parseFloat(document.getElementById("shotrating").value)
-          let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
-          let defendingprice = 3500 * parseFloat(document.getElementById("defencerating").value)
-          let gkprice = 2500 * parseFloat(document.getElementById("gkrating").value)
-    
-          let customsprice = 0
-          let ballondorprice = 0
-    
-          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
     
           if (document.getElementById("hascustoms").checked) {
     
@@ -158,17 +148,6 @@
         }
 
         else if(position == "LW" || position == "RW" || position == "ST"){
-          
-          let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
-          let shootingprice = 3500 * parseFloat(document.getElementById("shotrating").value)
-          let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
-          let defendingprice = 500 * parseFloat(document.getElementById("defencerating").value)
-          let gkprice = 500 * parseFloat(document.getElementById("gkrating").value)
-    
-          let customsprice = 0
-          let ballondorprice = 0
-    
-          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
     
           if (document.getElementById("hascustoms").checked) {
     
@@ -214,17 +193,6 @@
         }
 
         else if(position == "GK"){
-          
-          let overallprice = 3000 * parseFloat(document.getElementById("ovrrating").value)
-          let shootingprice = 500 * parseFloat(document.getElementById("shotrating").value)
-          let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
-          let defendingprice = 2000 * parseFloat(document.getElementById("defencerating").value)
-          let gkprice = 6000 * parseFloat(document.getElementById("gkrating").value)
-    
-          let customsprice = 0
-          let ballondorprice = 0
-    
-          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
     
           if (document.getElementById("hascustoms").checked) {
     
