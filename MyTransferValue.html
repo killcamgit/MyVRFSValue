@@ -115,6 +115,8 @@
 
                 }
 
+                 totalvalue = totalvalue + (totalvalue * timeplayed)
+
               }
 
         else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
@@ -144,6 +146,8 @@
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
+
+         totalvalue = totalvalue + (totalvalue * timeplayed)
 
         }
 
@@ -180,6 +184,8 @@
                 totalvalue = (totalvalue * (0.25 * document.getElementById("dribblerating").value))   
 
             }
+
+           totalvalue = totalvalue + (totalvalue * timeplayed)
     
 
           }
@@ -213,9 +219,10 @@
 
           }
 
-        }
-
          totalvalue = totalvalue + (totalvalue * timeplayed)
+
+        }
+               
 
     }
 
