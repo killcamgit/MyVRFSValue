@@ -72,6 +72,8 @@
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
 
+                let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value) / 2)
+
                 if(position == "CM" || position == "CAM"){
           
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
@@ -109,6 +111,8 @@
                     document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
                 }
+
+                    totalvalue = totalvalue + (totalvalue * timeplayedprice)
 
               }
 
@@ -150,6 +154,8 @@
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
+
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
 
         }
 
@@ -207,6 +213,8 @@
 
           }
 
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+
         }
 
         else if(position == "GK"){
@@ -246,6 +254,8 @@
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
+
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
 
         }
 
