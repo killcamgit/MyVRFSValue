@@ -1,14 +1,12 @@
 body {
   text-align: center;
   background-color: rgb(29, 29, 29);
-  width: 90vw;
-  height: 100vh;
 }
 
 h1 {
 
   color: white;
-  font-size: 10vw;
+  font-size: 3vw;
 
 }
 
@@ -23,7 +21,7 @@ h1 {
 .Contents, form, input {
 
   text-align: center;
-  font-size: 10vw;
+  font-size: 4vw;
   font-style: italic;
 
 }
@@ -31,7 +29,7 @@ h1 {
 .Contents, form, label {
 
   text-align: center;
-  font-size: 10vw;
+  font-size: 4vw;
   font-style: italic;
   color: white;
 
