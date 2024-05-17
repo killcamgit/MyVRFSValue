@@ -72,10 +72,11 @@
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
 
-                let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value))
+                
 
                 if(position == "CM" || position == "CAM"){
-          
+
+                let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value))
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 2000 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
@@ -119,7 +120,8 @@
               }
 
         else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
-          
+
+          let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value))
           let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
           let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
           let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
@@ -163,7 +165,8 @@
         }
 
         else if(position == "LW" || position == "RW" || position == "ST"){
-          
+
+          let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value))
           let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
           let shootingprice = 4500 * parseFloat(document.getElementById("shotrating").value)
           let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
@@ -223,7 +226,8 @@
         }
 
         else if(position == "GK"){
-          
+
+          let timeplayedprice = 0.5 * (parseFloat(document.getElementById("timeplayed").value))
           let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
           let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
           let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
