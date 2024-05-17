@@ -6,15 +6,15 @@
 <body>
 
 <header>
- 
+
     <h1>VRFS FUN</h1>
- 
+
 </header>
 
 <nav class="TopNav">
- 
+
     <a href="./index.html">Home</a>
-    <a href="./MyTransferValue.html">My Transfer Value</a>
+    <a href="./mytransfervalue.html">My Transfer Value</a>
 
 </nav>
 
@@ -25,7 +25,7 @@
         
         <form>
 
-            <img style="width: 300px; height:300px;" src="./images/vrfsvaluelogo.png" alt="My VRFS Value Logo" width="200" height="200">
+            <img style="width: 300px; height:300px;" src="vrfsvaluelogo.png" alt="My VRFS Value Logo" width="200" height="200">
           
               <div class="Centered"><label for="playerposition">Position: (GK, LB, CB, RB, CDM, CM, CAM, LW, RW, ST)</label></div>
               <input type="text" id="playerposition" name="playerposition"><br><br>
@@ -38,7 +38,7 @@
               <div class="Centered"><label for="defencerating">Defending:</label></div>
               <input type="text" id="defencerating" name="defencerating"><br><br>
               <div class="Centered"><label for="gkrating">Goalkeeping:</label></div>
-              <input type="text" id="gkrating" name="gkrating"><br><br> 
+              <input type="text" id="gkrating" name="gkrating"><br><br>
           
             <input type="checkbox" id="hascustoms" name="hascustoms" value="Customs">
           <label for="hascustoms">Have you won customs? (not bought or giveaway)</label>
@@ -49,13 +49,7 @@
           <br>
           <br>
           <div class="Centered"><label for="dribblerating">On a scale of 0 to 10, how good are you at dribbling in competitive games? (10 meaning you beat everybody, 5 being you beat people sometimes, 0 being i cant dribble):</label></div>
-          <input type="text" id="dribblerating" name="dribblerating">
-          <br>
-          <br>
-          <label for="timeplayed">Roughly, how long have you been playing the game? (in years, can use decimals)</label>
-          <input type="text" id="timeplayed" name="timeplayed">
-          <br>
-          <br>
+          <input type="text" id="dribblerating" name="dribblerating"><br><br>
           
           <button id="Submit" type="button" onclick="submitFunction()">SUBMIT</button>
           
@@ -69,28 +63,26 @@
           <br>
           </div>
           </body>
-           
+          
           <script>
               function submitFunction() {
-
+                
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
-          
-                
 
                 if(position == "CM" || position == "CAM"){
-
-                let customsprice = 0
-                let ballondorprice = 0
-                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
-               
-                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice 
+          
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 2000 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
                 let defendingprice = 2000 * parseFloat(document.getElementById("defencerating").value)
                 let gkprice = 0 * parseFloat(document.getElementById("gkrating").value)
-                 
+          
+                let customsprice = 0
+                let ballondorprice = 0
+          
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+          
                 if (document.getElementById("hascustoms").checked) {
           
                   customsprice = 400000
@@ -110,8 +102,6 @@
 
                 }
 
-                totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
-
                 if (totalvalue > 0){
 
                     document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
@@ -121,19 +111,18 @@
               }
 
         else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
-
-                let customsprice = 0
-                let ballondorprice = 0
-                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
-               
-                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-             
-                let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
-                let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
-                let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
-                let defendingprice = 2500 * parseFloat(document.getElementById("defencerating").value)
-                let gkprice = 2000 * parseFloat(document.getElementById("gkrating").value)
-         
+          
+          let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 2500 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 2000 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
           if (document.getElementById("hascustoms").checked) {
     
             customsprice = 400000
@@ -149,11 +138,10 @@
     
           if (document.getElementById("dribblerating").value) {
 
-              totalvalue = totalvalue + (200000 * document.getElementById("dribblerating").value)
+              totalvalue = (totalvalue * (0.3 * document.getElementById("dribblerating").value))  
               
           }
 
-          totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
           if (totalvalue > 0){
 
@@ -161,23 +149,21 @@
 
           }
 
-
         }
 
         else if(position == "LW" || position == "RW" || position == "ST"){
-
-                let customsprice = 0
-                let ballondorprice = 0
-                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
-               
-                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-         
-                let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
-                let shootingprice = 3500 * parseFloat(document.getElementById("shotrating").value)
-                let passingprice = 2500 * parseFloat(document.getElementById("passrating").value)
-                let defendingprice = 0 * parseFloat(document.getElementById("defencerating").value)
-                let gkprice = 0 * parseFloat(document.getElementById("gkrating").value)
-         
+          
+          let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 4500 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 0 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 0 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
           if (document.getElementById("hascustoms").checked) {
     
             customsprice = 400000
@@ -213,7 +199,6 @@
 
           }
 
-
           if (totalvalue > 0){
 
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
@@ -223,20 +208,18 @@
         }
 
         else if(position == "GK"){
-         
-                let customsprice = 0
-                let ballondorprice = 0
-                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
-               
-                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-
-         
-                let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
-                let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
-                let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
-                let defendingprice = 1500 * parseFloat(document.getElementById("defencerating").value)
-                let gkprice = 3000 * parseFloat(document.getElementById("gkrating").value)
-         
+          
+          let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
+          let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
+          let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
+          let defendingprice = 1500 * parseFloat(document.getElementById("defencerating").value)
+          let gkprice = 3000 * parseFloat(document.getElementById("gkrating").value)
+    
+          let customsprice = 0
+          let ballondorprice = 0
+    
+          let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+    
           if (document.getElementById("hascustoms").checked) {
     
             customsprice = 400000
@@ -249,8 +232,12 @@
             totalvalue = (totalvalue * 1.2)
     
           }
-
-          totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
+    
+          if (document.getElementById("dribblerating").value) {
+    
+            totalvalue = (totalvalue * (0.2 * document.getElementById("dribblerating").value))  
+    
+          }
 
           if (totalvalue > 0){
 
@@ -258,14 +245,11 @@
 
           }
 
-         
-
         }
-               
 
     }
 
-       </script>
+              </script>
 
 
 </main>
