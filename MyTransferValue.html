@@ -109,13 +109,13 @@
 
                 }
 
+                totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
+
                 if (totalvalue > 0){
 
                     document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
                 }
-
-                 totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
               }
 
@@ -140,6 +140,7 @@
               
           }
 
+          totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
           if (totalvalue > 0){
 
@@ -147,7 +148,6 @@
 
           }
 
-         totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
 
         }
 
@@ -184,11 +184,10 @@
                 totalvalue = (totalvalue * (0.25 * document.getElementById("dribblerating").value))   
 
             }
-
-           totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
     
 
           }
+
 
           if (totalvalue > 0){
 
@@ -213,13 +212,15 @@
     
           }
 
+          totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
+
           if (totalvalue > 0){
 
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
-         totalvalue = totalvalue + (totalvalue * (timeplayed / 2))
+         
 
         }
                
