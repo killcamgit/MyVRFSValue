@@ -72,8 +72,6 @@
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
 
-                
-
                 if(position == "CM" || position == "CAM"){
 
                 let timeplayedprice = 0.0833333333333333 * (parseFloat(document.getElementById("timeplayed").value))
@@ -109,13 +107,13 @@
 
                     if (document.getElementById("timeplayed").value) {
             
-            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+                    totalvalue = totalvalue + (totalvalue * timeplayedprice)
             
-        }
+                    }
 
                 if (totalvalue > 0){
 
-                    document.getElementById("Value").innerHTML = "£" + Math.floor(Number(totalvalue).toLocaleString());
+                    document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
                 }
 
@@ -164,7 +162,7 @@
 
           if (totalvalue > 0){
 
-              document.getElementById("Value").innerHTML = "£" + Math.floor(Number(totalvalue).toLocaleString());
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
@@ -229,7 +227,7 @@
             
             if (totalvalue > 0){
 
-              document.getElementById("Value").innerHTML = "£" + Math.floor(Number(totalvalue).toLocaleString());
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
@@ -278,7 +276,7 @@
 
           if (totalvalue > 0){
 
-              document.getElementById("Value").innerHTML = "£" + Math.floor(Number(totalvalue).toLocaleString());
+              document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
