@@ -54,6 +54,7 @@ color: red;
 
 .Links {
 
+display: inline-block;
 color: white;
 text-align: center;
 font-size: 18px;
