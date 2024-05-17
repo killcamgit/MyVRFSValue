@@ -106,13 +106,15 @@
 
                 }
 
+                    totalvalue = totalvalue + (totalvalue * timeplayedprice)
+
                 if (totalvalue > 0){
 
                     document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
                 }
 
-                    totalvalue = totalvalue + (totalvalue * timeplayedprice)
+                    
 
               }
 
@@ -148,6 +150,7 @@
               
           }
 
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
 
           if (totalvalue > 0){
 
@@ -155,7 +158,7 @@
 
           }
 
-            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+          
 
         }
 
@@ -207,13 +210,15 @@
 
           }
 
-          if (totalvalue > 0){
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+            
+            if (totalvalue > 0){
 
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
-            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+            
 
         }
 
@@ -249,13 +254,15 @@
     
           }
 
+            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+
           if (totalvalue > 0){
 
               document.getElementById("Value").innerHTML = "£" + Number(totalvalue).toLocaleString();
 
           }
 
-            totalvalue = totalvalue + (totalvalue * timeplayedprice)
+       
 
         }
 
