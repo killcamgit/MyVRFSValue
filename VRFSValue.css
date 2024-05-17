@@ -6,7 +6,7 @@ body {
 h1 {
 
   color: white;
-  font-size: 60px;
+  font-size: 40px;
 
 }
 
@@ -39,7 +39,7 @@ h1 {
 text-align: center;
 width: 70px;
 height: 40px;
-font-size: 30px;
+font-size: 20px;
 font-style: italic;
 color: red;
 
@@ -47,7 +47,7 @@ color: red;
 
 #Value {
 
-font-size: 60px;
+font-size: 30px;
 color: red;
 
 }
