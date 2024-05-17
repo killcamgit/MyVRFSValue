@@ -76,14 +76,15 @@
                 let positioninput = document.getElementById("playerposition").value
                 let position = positioninput.toUpperCase()
           
+                
+
+                if(position == "CM" || position == "CAM"){
+
                 let customsprice = 0
                 let ballondorprice = 0
                 let timeplayed = parseFloat(document.getElementById("timeplayed").value)
                
-                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
-
-                if(position == "CM" || position == "CAM"){
-
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice 
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 2000 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 2000 * parseFloat(document.getElementById("passrating").value)
@@ -121,6 +122,12 @@
 
         else if(position == "LB" || position == "CB" || position == "RB" || position == "CDM"){
 
+                let customsprice = 0
+                let ballondorprice = 0
+                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
+               
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+             
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
@@ -159,7 +166,13 @@
 
         else if(position == "LW" || position == "RW" || position == "ST"){
 
-               let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
+                let customsprice = 0
+                let ballondorprice = 0
+                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
+               
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
+         
+                let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 3500 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 2500 * parseFloat(document.getElementById("passrating").value)
                 let defendingprice = 0 * parseFloat(document.getElementById("defencerating").value)
@@ -210,7 +223,14 @@
         }
 
         else if(position == "GK"){
+         
+                let customsprice = 0
+                let ballondorprice = 0
+                let timeplayed = parseFloat(document.getElementById("timeplayed").value)
+               
+                let totalvalue = overallprice + shootingprice + passingprice + defendingprice + gkprice + customsprice
 
+         
                 let overallprice = 2500 * parseFloat(document.getElementById("ovrrating").value)
                 let shootingprice = 0 * parseFloat(document.getElementById("shotrating").value)
                 let passingprice = 1500 * parseFloat(document.getElementById("passrating").value)
