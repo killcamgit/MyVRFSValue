@@ -24,23 +24,89 @@
 <main>
 
         <h1>Random Challenge Generator</h1>
-        <h2>Press The Button To Get A Random Challenge To Complete!</h2>
-        
-        
-          
-          <br>
-          <br>
-          <br>
-          </div>
-          </body>
- 
+        <h2>Press The Button To Get A Random IN MATCH Challenge To Complete!</h2>
 
+        <div class="ChallengeText"><h1></h1></div>
+        <br>
+        <br>
+        <button id="ingamechallengebutton" type="button" onclick="ingamechallengeFunction()">GET IN MATCH CHALLENGE</button>
+        <br>
+        <br>
+        <h2>Press The Button To Get A Random IN PRACTICE Challenge To Complete!</h2>
+
+        <div class="ChallengeText"><h1></h1></div>
+        <br>
+        <br>
+        <button id="inpracticechallengebutton" type="button" onclick="inpracticechallengeFunction()">GET IN PRACTICE CHALLENGE</button>
+        
+          </div>
+ 
 
 </main>
 
 </body>
 
+<script>
 
+const ingamechallenges = [];
+ingamechallenges.push("Score a rabona",
+            "Score from a corner",
+            "Score a header",
+            "Score from own half",
+            "Score a a volley",
+            "Score a freekick",
+            "Score a penalty",
+            "Score a bicycle kick",
+            "Score a backheel",
+            "Assist from a freekick",
+            "Assist from a corner",
+            "Assist from a penalty (pass to a teammate sideways or backwards)",
+            "Assist from a goal kick",
+            "Play as a ST",
+            "Play as a box to box CM",
+            "Play as a playmaking CAM",
+            "Play as a no nonsense CB (clear the ball out, brexit style)",
+            "Play as a ball playing CB (look for clear passes)",
+            "Play as a LW",
+            "Play as a RW",
+            "Play as a GK",
+            "Play with only your right foot (left stick for moving only, left hand behind back",
+            "Play with only your left foot (right stick for turning only, right hand behind back",
+            "Score a goal while sitting down",
+            "Assist from a cross",
+            "Score from a crossbar rebound (hit the crossbar and score from the rebound)",
+            "Score from a post rebound (hit the post and score from the rebound)",
+            "Do the griddy as a celebration every time you score",
+            "Mute your mic all game",
+            "Complete 10 kickups");
+
+    const inpracticechallenges = [];
+inpracticechallenges.push("Score a top corner rebona from the edge of the box",
+            "Hit the crossbar 3 times in a row",
+            "Hit the left post, then right post, then crossbar in a row",
+            "Hit the crossbar from the halfway line",
+            "Air dribble from one goal, to the other, carrying the ball into the net to score",
+            "Complete 50 kick ups",
+            "Challenge someone to a penalty shootout and win",
+            "Find someone with a Real Madrid kit on",
+            "Find someone with a Barcelona kit on",
+            "Go in goal and save 10 shots in a row",
+            "Learn a new dribbling skill",
+            "Score by curling the ball into the top right corner",
+            "Score by low-power shotting into the bottom right corner",
+            "Score by curling the ball into the top left corner",
+            "Score by low-power shotting into the bottom left corner",
+            "Score into a top corner against a bot/player goalkeeper",
+            "Score into a bottom corner against a bot/player goalkeeper",
+            "Score a bicycle kick against a bot/player goalkeeper",
+            "Score a rabona against a bot/player goalkeeper",
+            "Score 5 Penalties in row against a bot/player goalkeeper");
+
+    var ingamechallenge = ingamechallenges[Math.floor(Math.random()*ingamechallenges.length)]
+    var inpracticechallenge = inpracticechallenges[Math.floor(Math.random()*inpracticechallenges.length)]
+
+    
+</script>
 
 
 </html>
