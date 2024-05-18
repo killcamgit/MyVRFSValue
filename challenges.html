@@ -26,7 +26,7 @@
         <h1>Random Challenge Generator</h1>
         <h2>Press The Button To Get A Random IN MATCH Challenge To Complete!</h2>
 
-        <div class="ChallengeText"><h1></h1></div>
+        <div class="InGameChallengeText"><h1></h1></div>
         <br>
         <br>
         <button id="ingamechallengebutton" type="button" onclick="ingamechallengeFunction()">GET IN MATCH CHALLENGE</button>
@@ -34,7 +34,7 @@
         <br>
         <h2>Press The Button To Get A Random IN PRACTICE Challenge To Complete!</h2>
 
-        <div class="ChallengeText"><h1></h1></div>
+        <div class="InPracticeChallengeText"><h1></h1></div>
         <br>
         <br>
         <button id="inpracticechallengebutton" type="button" onclick="inpracticechallengeFunction()">GET IN PRACTICE CHALLENGE</button>
@@ -105,12 +105,16 @@ inpracticechallenges.push("Score a top corner rebona from the edge of the box",
 function ingamechallengeFunction() {
 
 var ingamechallenge = ingamechallenges[Math.floor(Math.random()*ingamechallenges.length)]
+document.getElementById("InGameChallengeText").innerHTML
+    
+}
+function ingamepracticeFunction() {
 
+var inpracticechallenge = inpracticechallenges[Math.floor(Math.random()*inpracticechallenges.length)]
+document.getElementById("InPracticeChallengeText").innerHTML
     
 }
     
-    var ingamechallenge = ingamechallenges[Math.floor(Math.random()*ingamechallenges.length)]
-    var inpracticechallenge = inpracticechallenges[Math.floor(Math.random()*inpracticechallenges.length)]
 
     
 </script>
